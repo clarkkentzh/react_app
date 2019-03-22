@@ -20,7 +20,25 @@
 }
 
 .App-link {
-  color: #61dafb;
+  font-size: 16px;
+  margin-left: 10px;
+  color: #222222;
+  width: 100px;
+  height: 30px;
+  text-decoration:none;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+}
+
+.wrapBtn {
+  width: 500px;
+  display: flex;
+  margin-top: 10px;
+  flex-direction: row;
+  justify-content: center;
 }
 
 @keyframes App-logo-spin {

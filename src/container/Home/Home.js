@@ -6,30 +6,21 @@ class Home extends Component {
   componentDidMount(){
   }
 
+  goPages = (routerName)=>{
+    this.props.history.push(routerName)
+  }
+
   render() {
     return (
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="/login"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            登录
-          </a>
-          <a
-            className="App-link"
-            href="/form"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            表单页面
-          </a>
+          <div className="wrapBtn">
+              <div onClick={this.goPages.bind(this,'/login')} className="App-link">登录</div>
+              <div onClick={this.goPages.bind(this,'/form')} className="App-link">表单页面</div>
+              <div onClick={this.goPages.bind(this,'/redux_test')} className="App-link">测试redux</div>
+          </div>
+          
         </header>
       </div>
     );
