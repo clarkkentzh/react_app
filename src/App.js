@@ -8,6 +8,7 @@ import Home from './container/Home/Home';
 import Login from './container/Login/Login';
 import Form from './container/Form/Form';
 import TestRedux from './container/TestRedux/TestRedux';
+import Carousel from './container/Carousel/Carousel';
 
 class App extends Component {
   render() {
@@ -19,6 +20,7 @@ class App extends Component {
             <Route path='/login' exact component={Login}/>
             <Route path='/form' exact component={Form}/>
             <Route path='/redux_test' exact component={TestRedux}/>
+            <Route path='/carousel' exact component={Carousel}/>
           </Switch>
         </div>
       </Router>
