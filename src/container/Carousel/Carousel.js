@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 class Carousel extends Component {
   constructor(props) {
@@ -18,23 +20,29 @@ class Carousel extends Component {
     return (
         <div>
             <Slider {...settings}>
-                <div style={{
-                    width: '500px',
-                    height: '100px',
-                    backgroundColor: 'blue'
-                }} >
+                <div>
+                    <div style={{
+                        width: '500px',
+                        height: '100px',
+                        backgroundColor: 'blue'
+                    }} >
+                    </div>
                 </div>
-                <div style={{
-                    height: '100px',
-                    width: '500px',
-                    backgroundColor: 'red'
-                }} >
+                <div>
+                    <div style={{
+                        width: '500px',
+                        height: '100px',
+                        backgroundColor: 'red'
+                    }} >
+                    </div>
                 </div>
-                <div style={{
-                    height: '100px',
-                    width: '500px',
-                    backgroundColor: 'yellow'
-                }} >
+                <div>
+                    <div style={{
+                        width: '500px',
+                        height: '100px',
+                        backgroundColor: 'yellow'
+                    }} >
+                    </div>
                 </div>
             </Slider>
         </div>
