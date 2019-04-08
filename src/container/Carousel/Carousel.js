@@ -9,7 +9,6 @@ class Carousel extends Component {
     this.state = {value: '鸣人'};
   }
   render() {
-    let banners = new Array(3)
     const settings = {
         dots: true,
         infinite: true,
@@ -22,25 +21,25 @@ class Carousel extends Component {
             <Slider {...settings}>
                 <div>
                     <div style={{
-                        width: '500px',
-                        height: '100px',
+                        width: '100%',
+                        height: '500px',
                         backgroundColor: 'blue'
                     }} >
                     </div>
                 </div>
                 <div>
                     <div style={{
-                        width: '500px',
-                        height: '100px',
+                        width: '100%',
+                        height: '500px',
                         backgroundColor: 'red'
                     }} >
                     </div>
                 </div>
                 <div>
                     <div style={{
-                        width: '500px',
-                        height: '100px',
-                        backgroundColor: 'yellow'
+                        width: '100%',
+                        height: '500px',
+                        backgroundColor: 'green'
                     }} >
                     </div>
                 </div>
