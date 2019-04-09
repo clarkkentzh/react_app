@@ -6,6 +6,9 @@ import * as serviceWorker from './serviceWorker';
 import { createStore, combineReducers } from 'redux';
 import * as reducers from './reducer/reducer';
 import { Provider } from 'react-redux';
+import {
+  BrowserRouter as Router,
+} from 'react-router-dom';
 
 let reducer;
 reducer = combineReducers({
@@ -19,8 +22,10 @@ store = createStore(
 
 ReactDOM.render(
     <Provider store={store}>
-        <App />
-    </Provider>, document.getElementById('root')
+        <Router>
+            <App/>
+        </Router>
+    </Provider>,document.getElementById('root')
 );
 
 // If you want your app to work offline and load faster, you can change
