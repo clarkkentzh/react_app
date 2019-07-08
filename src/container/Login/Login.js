@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Form, Icon, Input, Button, Checkbox } from 'antd';
 import 'antd/lib/form/style/'
 
