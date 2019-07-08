@@ -38,11 +38,11 @@ class Login extends React.Component {
               })(
                 <Checkbox>Remember me</Checkbox>
               )}
-              <a className="login-form-forgot" href="">Forgot password</a>
+              <button className="login-form-forgot" href="#">Forgot password</button>
               <Button type="primary" htmlType="submit" className="login-form-button">
                 Log in
               </Button>
-              Or <a href="">register now!</a>
+              Or <button href="#">register now!</button>
             </Form.Item>
           </Form>
       </div>

@@ -22,8 +22,11 @@
 .App-link {
   font-size: 16px;
   margin-left: 10px;
+  margin-top: 10px;
   color: #222222;
-  width: 100px;
+  /* width: 100px; */
+  padding-left: 20px;
+  padding-right: 20px;
   height: 30px;
   text-decoration:none;
   background-color: #ffffff;
@@ -38,7 +41,8 @@
   display: flex;
   margin-top: 10px;
   flex-direction: row;
-  justify-content: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
 }
 
 @keyframes App-logo-spin {

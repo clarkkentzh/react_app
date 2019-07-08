@@ -11,6 +11,7 @@ import TestRedux from './container/TestRedux/TestRedux';
 import Carousel from './container/Carousel/Carousel';
 import TestAntd from './container/AntdComponents/Test'
 import Header from './container/AntdComponents/Header'
+import HookPage from './container/Hook/HookPage'
 
 const App = withRouter((props)=> {
     return (
@@ -23,6 +24,7 @@ const App = withRouter((props)=> {
             <Route path='/redux_test' exact component={TestRedux}/>
             <Route path='/carousel' exact component={Carousel}/>
             <Route path='/antdtest' exact component={TestAntd}/>
+            <Route path='/hook' exact component={HookPage}/>
           </Switch>
         </div>
     );
