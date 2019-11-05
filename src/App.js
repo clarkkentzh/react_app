@@ -13,6 +13,7 @@ import TestAntd from './container/AntdComponents/Test'
 import Header from './container/AntdComponents/Header'
 import HookPage from './container/Hook/HookPage'
 import TextPage from './container/TestFunction/TextPage'
+import GameDemo from './container/GameDemo/GamePage'
 
 const App = withRouter((props)=> {
     return (
@@ -27,6 +28,7 @@ const App = withRouter((props)=> {
             <Route path='/antdtest' exact component={TestAntd}/>
             <Route path='/hook' exact component={HookPage}/>
             <Route path='/tests' exact component={TextPage}/>
+            <Route path='/reactdemo' exact component={GameDemo}/>
           </Switch>
         </div>
     );
