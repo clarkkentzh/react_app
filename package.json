@@ -9,6 +9,7 @@
     "electron": "^6.0.10",
     "moment": "^2.24.0",
     "react": "^16.8.4",
+    "react-csv": "^1.1.2",
     "react-dom": "^16.8.4",
     "react-redux": "^6.0.1",
     "react-router-dom": "^5.0.0",
@@ -16,7 +17,9 @@
     "react-slick": "^0.23.2",
     "redux": "^4.0.1",
     "redux-persist": "^6.0.0",
-    "slick-carousel": "^1.8.1"
+    "slick-carousel": "^1.8.1",
+    "web3-eth-iban": "^1.2.4",
+    "xlsx": "^0.15.4"
   },
   "scripts": {
     "start": "react-scripts start",

@@ -24,6 +24,7 @@ class Home extends Component {
               <div onClick={this.goPages.bind(this,'/hook')} className="App-link">Hook新特性</div>
               <div onClick={this.goPages.bind(this,'/tests')} className="App-link">测试页面</div>
               <div onClick={this.goPages.bind(this,'/reactdemo')} className="App-link">官网例子</div>
+              <div onClick={this.goPages.bind(this,'/readfile')} className="App-link">读取文件</div>
           </div>
           
         </header>

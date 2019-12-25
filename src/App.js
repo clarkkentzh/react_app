@@ -14,6 +14,7 @@ import Header from './container/AntdComponents/Header'
 import HookPage from './container/Hook/HookPage'
 import TextPage from './container/TestFunction/TextPage'
 import GameDemo from './container/GameDemo/GamePage'
+import ReadFile from './container/ReadFile'
 
 const App = withRouter((props)=> {
     return (
@@ -29,6 +30,7 @@ const App = withRouter((props)=> {
             <Route path='/hook' exact component={HookPage}/>
             <Route path='/tests' exact component={TextPage}/>
             <Route path='/reactdemo' exact component={GameDemo}/>
+            <Route path='/readfile' exact component={ReadFile}/>
           </Switch>
         </div>
     );
