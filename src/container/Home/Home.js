@@ -14,7 +14,6 @@ class Home extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
           <div className="wrapBtn">
               <div onClick={this.goPages.bind(this,'/login')} className="App-link">登录</div>
               <div onClick={this.goPages.bind(this,'/form')} className="App-link">表单页面</div>
@@ -25,8 +24,9 @@ class Home extends Component {
               <div onClick={this.goPages.bind(this,'/tests')} className="App-link">测试页面</div>
               <div onClick={this.goPages.bind(this,'/reactdemo')} className="App-link">官网例子</div>
               <div onClick={this.goPages.bind(this,'/readfile')} className="App-link">读取文件</div>
+              <div onClick={this.goPages.bind(this,'/websocket')} className="App-link">websocket</div>
+              <div onClick={this.goPages.bind(this,'/mqtt')} className="App-link">MQTT</div>
           </div>
-          
         </header>
       </div>
     );

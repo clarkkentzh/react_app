@@ -15,6 +15,8 @@ import HookPage from './container/Hook/HookPage'
 import TextPage from './container/TestFunction/TextPage'
 import GameDemo from './container/GameDemo/GamePage'
 import ReadFile from './container/ReadFile'
+import SocketComponent from './container/Socket/SocketComponent'
+import MQTTComponent from './container/MQTT/index'
 
 const App = withRouter((props)=> {
     return (
@@ -31,6 +33,8 @@ const App = withRouter((props)=> {
             <Route path='/tests' exact component={TextPage}/>
             <Route path='/reactdemo' exact component={GameDemo}/>
             <Route path='/readfile' exact component={ReadFile}/>
+            <Route path='/websocket' exact component={SocketComponent}/>
+            <Route path='/mqtt' exact component={MQTTComponent}/>
           </Switch>
         </div>
     );
