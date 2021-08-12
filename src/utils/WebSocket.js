@@ -22,6 +22,7 @@ export default  class webSocket {
             
         //     this.socket = new SockJS(socketUrl);
         // }
+        this.socket.binaryType = 'arraybuffer';
         this.socket.onopen = this.onopen;
         this.socket.onmessage = this.onmessage;
         this.socket.onclose = this.onclose;
@@ -30,12 +31,12 @@ export default  class webSocket {
         this.socket.closeSocket = this.closeSocket;
         // 检测返回的状态码 如果socket.readyState不等于1则连接失败，关闭连接
         if(timeout) {
-            let time = setTimeout(() => {
-                 if(this.socket && this.socket.readyState !== 1) {
-                     this.socket.close();
-                 }
-                 clearInterval(time);
-            }, timeout);
+            // let time = setTimeout(() => {
+            //      if(this.socket && this.socket.readyState !== 1) {
+            //          this.socket.close();
+            //      }
+            //      clearInterval(time);
+            // }, timeout);
         }
     };
     // 连接成功触发
@@ -62,13 +63,13 @@ export default  class webSocket {
         if(e.code=='4500'){
             this.socket.close();
         }else{
-            this.taskRemindInterval = setInterval(()=>{
-                if(this.isSucces){
-                    this.connection();
-                }else{
-                    clearInterval(this.taskRemindInterval)
-                }
-            },20000)
+            // this.taskRemindInterval = setInterval(()=>{
+            //     if(this.isSucces){
+            //         this.connection();
+            //     }else{
+            //         clearInterval(this.taskRemindInterval)
+            //     }
+            // },20000)
         }
     };
     onerror = (e) => {
@@ -77,11 +78,18 @@ export default  class webSocket {
         this.socket = null;
         socketError && socketError(e);
     };
-    sendMessage = (value) => {
+    sendMessage = (value, isBuffer) => {
         console.log('send message', value);
         // 向后端发送数据
         if(this.socket) {
-            this.socket.send(JSON.stringify(value));
+            if(isBuffer){
+                this.socket.send(value);
+            }else {
+                this.socket.send(JSON.stringify(value));
+            }
         }
+    };
+    closeSocket = (value) => {
+        this.socket && this.socket.close();
     };
 };

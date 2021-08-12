@@ -38,6 +38,7 @@ class ClassMqtt extends React.Component {
 
     if (this.client) {
       this.client.on("connect", () => {
+        console.log('Reconnecting success');
         this.setState({ connectStatus: "Connected" });
       });
       this.client.on("error", (err) => {
@@ -45,6 +46,7 @@ class ClassMqtt extends React.Component {
         this.client.end();
       });
       this.client.on("reconnect", () => {
+        console.error('Reconnecting');
         this.setState({ connectStatus: "Reconnecting" });
       });
       this.client.on("message", (topic, message) => {
