@@ -4,18 +4,19 @@
   "private": true,
   "main": "main.js",
   "dependencies": {
-    "antd": "^3.16.2",
+    "antd": "^4.17.0",
     "bip39": "^3.0.2",
     "cross-env": "^7.0.3",
+    "dva-core": "^2.0.4",
     "electron": "^6.0.10",
     "moment": "^2.24.0",
     "mqtt": "^4.2.6",
     "react": "^16.8.4",
     "react-csv": "^1.1.2",
     "react-dom": "^16.8.4",
-    "react-redux": "^6.0.1",
+    "react-redux": "^7.2.6",
     "react-router-dom": "^5.0.0",
-    "react-scripts": "2.1.8",
+    "react-scripts": "^4.0.3",
     "react-slick": "^0.23.2",
     "redux": "^4.0.1",
     "redux-persist": "^6.0.0",
@@ -24,9 +25,9 @@
     "xlsx": "^0.15.4"
   },
   "scripts": {
-    "start": "cross-env PORT=9999 react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
+    "start": "cross-env PORT=9999 craco start",
+    "build": "craco build",
+    "test": "craco test",
     "eject": "react-scripts eject",
     "electron-start": "electron ."
   },
@@ -40,6 +41,12 @@
     "not op_mini all"
   ],
   "devDependencies": {
-    "redux-devtools": "^3.5.0"
+    "redux-devtools": "^3.5.0",
+    "@babel/plugin-proposal-decorators": "^7.16.4",
+    "@craco/craco": "^6.4.0",
+    "babel-plugin-import": "^1.13.3",
+    "craco-less": "^1.20.0",
+    "terser-webpack-plugin": "^4.2.3",
+    "uglifyjs-webpack-plugin": "^2.2.0"
   }
 }

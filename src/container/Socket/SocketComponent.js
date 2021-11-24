@@ -248,7 +248,7 @@ class SocketComponent extends Component {
         let bufferLists = [];
         let audioCtx = new (window.AudioContext || window.webkitAudioContext)({sampleRate: 8000});
         this.socket = new WebSocket({
-            socketUrl: 'ws://192.168.52.216:32311/webSocket/admin',
+            socketUrl: 'ws://192.168.52.216:32311/webSocket/alarm-voice',
             timeout: 5000,
             socketMessage: (reponse) => {
                 console.log('get message',reponse);  //后端返回的数据，渲染页面

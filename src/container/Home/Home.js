@@ -26,6 +26,7 @@ class Home extends Component {
               <div onClick={this.goPages.bind(this,'/readfile')} className="App-link">读取文件</div>
               <div onClick={this.goPages.bind(this,'/websocket')} className="App-link">websocket</div>
               <div onClick={this.goPages.bind(this,'/mqtt')} className="App-link">MQTT</div>
+              <div onClick={this.goPages.bind(this,'/dva')} className="App-link">DVA</div>
           </div>
         </header>
       </div>

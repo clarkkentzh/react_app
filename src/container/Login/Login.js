@@ -1,5 +1,6 @@
 import React from 'react';
-import { Form, Icon, Input, Button, Checkbox } from 'antd';
+import { Form, Input, Button, Checkbox } from 'antd';
+import { LockOutlined, UserOutlined} from '@ant-design/icons';
 import 'antd/lib/form/style/'
 
 class Login extends React.Component {
@@ -16,19 +17,19 @@ class Login extends React.Component {
     const { getFieldDecorator } = this.props.form;
     return (
       <div style={{width: 500, margin: '0px auto'}}>
-          <Form onSubmit={this.handleSubmit} className="login-form">
+          {/* <Form onSubmit={this.handleSubmit} className="login-form">
             <Form.Item>
               {getFieldDecorator('userName', {
                 rules: [{ required: true, message: 'Please input your username!' }],
               })(
-                <Input prefix={<Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />} placeholder="Username" />
+                <Input prefix={<UserOutlined style={{ color: 'rgba(0,0,0,.25)' }} />} placeholder="Username" />
               )}
             </Form.Item>
             <Form.Item>
               {getFieldDecorator('password', {
                 rules: [{ required: true, message: 'Please input your Password!' }],
               })(
-                <Input prefix={<Icon type="lock" style={{ color: 'rgba(0,0,0,.25)' }} />} type="password" placeholder="Password" />
+                <Input prefix={<LockOutlined style={{ color: 'rgba(0,0,0,.25)' }} />} type="password" placeholder="Password" />
               )}
             </Form.Item>
             <Form.Item>
@@ -44,13 +45,14 @@ class Login extends React.Component {
               </Button>
               Or <button href="#">register now!</button>
             </Form.Item>
-          </Form>
+          </Form> */}
       </div>
       
     );
   }
 }
 
-const WrappedNormalLoginForm = Form.create({ name: 'normal_login' })(Login);
+// const WrappedNormalLoginForm = Form.create({ name: 'normal_login' })(Login);
 
-export default WrappedNormalLoginForm;
+// export default WrappedNormalLoginForm;
+export default Login;
